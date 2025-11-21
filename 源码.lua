@@ -2,6 +2,15 @@ local success, library = pcall(function()
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/13222222fcc/123/refs/heads/main/UI.lua"))()
 end)
 
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "正在初始化",
+    Text = "开始倒计时",
+    Duration = 2.1,
+})
+wait(2)
+end)
+
 if not success then
 print("殺脚本")  
     return
@@ -13,18 +22,20 @@ local Wans = window:Tab("关于，某个人教我做的",'84830962019412')
 
 local Wan =Wans:section("通用",true)
 
-Wan:Button("甩飞", function()
-    while Fling[4] do
-        if index > playercount then
-            CloseObject(ToggleServerKill)
-            DisplayText("全部甩飞成功","汉化小玄奘")
-            Fling[4] = false
-            break
-        else   
 end)
 
-Wan:Toggle("开关", "Wan", false, function(a)
+"Wan", false, function(a)
     
+end)
+
+Wan:Button("悬浮窗测试",function)
+    local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "Wan script",
+    Text = "Wan Wan Wan",
+    Duration = 5,
+})
+wait(2)
 end)
 
 Wan:Slider('滑块', 'Wan', 0, 0, 9999,false, function(b)

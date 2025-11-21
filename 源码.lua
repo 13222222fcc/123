@@ -9,35 +9,50 @@ end
 
 local window = library:new("挽脚本")
 
-local FengYu = window:Tab("关于",'84830962019412')
+local Wans = window:Tab("关于，某个人教我做的",'84830962019412')
 
-local Feng =FengYu:section("通用",true)
+local Wan =Wans:section("通用",true)
 
-Feng:Button("文本", function()
+Wan:Button("甩飞", function()
+    while Fling[4] do
+        if index > playercount then
+            CloseObject(ToggleServerKill)
+            DisplayText("全部甩飞成功","汉化小玄奘")
+            Fling[4] = false
+            break
+        else   
+end)
+
+Wan:Toggle("开关", "Wan", false, function(a)
     
 end)
 
-Feng:Toggle("开关", "FengYu", false, function(a)
+Wan:Slider('滑块', 'Wan', 0, 0, 9999,false, function(b)
     
 end)
 
-Feng:Slider('滑块', 'FengYu', 0, 0, 9999,false, function(b)
-    
-end)
-
-Feng:Textbox("输入", "FengYu", "输入", function(c)
+Wan:Textbox("输入", "Wan", "输入", function(c)
   
 end)
 
-Feng:Dropdown("下拉式", "FengYu", {
+Wan:Dropdown("下拉式", "Wan", {
     "额"
 }, function(d)
     
 end)
 
-local FengYu = window:Tab("甬用",'84830962019412')
+local Wans = window:Tab("甬用",'84830962019412')
 
-local Feng =FengYu:section("通用",true)
+local Wan =Wans:section("通用",true)
 
-Feng:Toggle("某个东西", "FengYu", false, function(a)
+Wan:Toggle("某个东西", "FengYu", false, function(a)
 
+end)
+
+credits:Toggle("脚本框架变小一点", "", false, function(state)
+        if state then
+        game:GetService("CoreGui")["frosty"].Main.Style = "DropShadow"
+        else
+            game:GetService("CoreGui")["frosty"].Main.Style = "Custom"
+        end
+    end)
